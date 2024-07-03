@@ -1,23 +1,22 @@
 import { CharacterModel } from "@/domain/character.domain";
 
-interface CardListProps {
+interface GridListProps {
   listOfImages: CharacterModel[];
 }
 
-function CardList({ listOfImages }: CardListProps) {
+function GridList({ listOfImages }: GridListProps) {
   return (
-    <div className="flex w-full flex-wrap gap-2">
+    <div className="grid w-full grid-cols-1 justify-center gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
       {listOfImages.map((character) => (
-        <div className="rounded-md bg-white py-2 shadow-md">
+        <div className="flex items-center justify-center bg-white py-2">
           <img
             className="rounded-md"
             src={character.image}
             alt={character.name}
           />
-          <h1 className="pt-2 text-center">{character.name}</h1>
         </div>
       ))}
     </div>
   );
 }
-export default CardList;
+export default GridList;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CardList from "@/components/card/cardList";
+import { GridList } from "@/components/grid";
 import ImageSlider from "@/components/slider/imageSlider";
 import { TabType } from "@/components/tabs";
 import Tabs from "@/components/tabs/tabs";
@@ -25,6 +26,7 @@ function Home() {
       {tabSelected === TabType.CARDS && (
         <CardList listOfImages={data.results} />
       )}
+      {tabSelected === TabType.GRID && <GridList listOfImages={data.results} />}
     </div>
   );
 }
