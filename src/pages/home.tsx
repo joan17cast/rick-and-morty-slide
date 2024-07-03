@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CardList from "@/components/card/cardList";
 import { GridList } from "@/components/grid";
+import VerticalList from "@/components/list/verticalList";
 import ImageSlider from "@/components/slider/imageSlider";
 import { TabType } from "@/components/tabs";
 import Tabs from "@/components/tabs/tabs";
@@ -27,6 +28,9 @@ function Home() {
         <CardList listOfImages={data.results} />
       )}
       {tabSelected === TabType.GRID && <GridList listOfImages={data.results} />}
+      {tabSelected === TabType.LIST && (
+        <VerticalList listOfImages={data.results} />
+      )}
     </div>
   );
 }
