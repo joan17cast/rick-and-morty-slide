@@ -1,4 +1,4 @@
-export { default as tabs } from "./tabs";
+export { default as Tabs } from "./tabs";
 
 export enum TabType {
   CARRUSEL = "Carrusel",
