@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Rick and Morty slider
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+The task is to fetch content (photos) from an API (you don’t need to load real data from Instagram/Facebook/Twitter but instead you should mock the server call) and display that content in several different layouts (Grid, Carousel/Slider, and Cards). We recommend using React to build a web app (as we use it for our product) and TypeScript (if you know TS) that will fetch photos and information from an API. The app should display photos and descriptions of each photo. The user should be able to switch layout between a list view, grid view and carousel view.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+To get started with this project, follow the instructions below.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+Ensure you have the following installed:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- [pnpm Install](https://pnpm.io/installation)
+
+### Warning!!!
+
+You should create a .env file. Please take a look at the .env.example file provided in the project for reference.
+
+The API URL is this one:
+
+```
+https://rickandmortyapi.com
+```
+---
+### Development
+
+```
+pnpm dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Building for Production
+
+
+```
+pnpm build
+```
+
+### Testing
+
+```
+pnpm test
+```
