@@ -1,4 +1,5 @@
 import { TabType } from "@/components/tabs";
+import { CharacterModel } from "@/domain/character.domain";
 
 export const tabsData = [
   {
@@ -68,5 +69,22 @@ export const tabsData = [
       </svg>
     ),
     name: TabType.LIST,
+  },
+];
+
+export const mockCharacters: CharacterModel[] = [
+  {
+    id: 1,
+    name: "Character 1",
+    image: "image1.jpg",
+    species: "Human",
+    status: "Alive",
+  },
+  {
+    id: 2,
+    name: "Character 2",
+    image: "image2.jpg",
+    species: "Alien",
+    status: "Dead",
   },
 ];
