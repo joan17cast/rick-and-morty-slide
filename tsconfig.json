@@ -2,7 +2,7 @@
   "compilerOptions": {
     "composite": true,
     "moduleResolution": "node",
-    "target": "ESNext",
+    "target": "esnext",
     "module": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -13,7 +13,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
     "noFallthroughCasesInSwitch": true,
@@ -27,8 +27,9 @@
     "useDefineForClassFields": true,
     "allowImportingTsExtensions": true,
     "moduleDetection": "force",
+
     "checkJs": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
     }
@@ -39,7 +40,7 @@
     "**/*.cjs",
     "**/*.mjs",
     "**/*.js",
-    ".eslintrc.cjs"
+    "**/*.json"
   ],
   "exclude": ["node_modules", "dist"],
   "ts-node": {

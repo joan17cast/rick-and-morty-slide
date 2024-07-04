@@ -8,7 +8,7 @@ function CardList({ listOfImages }: CardListProps) {
   return (
     <div className="flex w-full flex-wrap gap-2">
       {listOfImages.map((character) => (
-        <div className="rounded-md bg-white py-2 shadow-md">
+        <div key={character.id} className="rounded-md bg-white py-2 shadow-md">
           <img
             className="rounded-md"
             src={character.image}

@@ -8,7 +8,7 @@ function VerticalList({ listOfImages }: VerticalListProps) {
   return (
     <div className="flex w-full flex-col justify-center gap-4 px-10">
       {listOfImages.map((character) => (
-        <div className="flex flex-col rounded-md bg-white shadow-md sm:flex-row">
+        <div key={character.id} className="flex flex-col rounded-md bg-white shadow-md sm:flex-row">
           <img
             className="rounded-md"
             src={character.image}
